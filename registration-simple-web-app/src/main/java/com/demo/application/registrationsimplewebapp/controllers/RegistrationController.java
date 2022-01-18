@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.demo.application.registrationsimplewebapp.dto.UserDto;
+import com.demo.application.registrationsimplewebapp.exceptions.UserAlreadyExistsException;
 import com.demo.application.registrationsimplewebapp.services.UserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -41,7 +42,9 @@ public class RegistrationController {
             return "register";
         }
 
-        UserDto savedUser = userService.saveUser(user);
-        return "good";
+
+        UserDto savedUser = userService.registerNewUser(user);
+
+        return "index";
     }
 }

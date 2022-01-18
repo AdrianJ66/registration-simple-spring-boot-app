@@ -24,5 +24,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .formLogin();
+
+        security.headers()
+                .frameOptions()
+                .disable();
     }
 }
