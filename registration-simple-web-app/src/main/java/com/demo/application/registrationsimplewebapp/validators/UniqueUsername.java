@@ -12,12 +12,13 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-@Target({TYPE, FIELD, ANNOTATION_TYPE})
+@Target({ TYPE, FIELD, ANNOTATION_TYPE })
 @Retention(RUNTIME)
-@Constraint(validatedBy = EmailValidator.class)
+@Constraint(validatedBy = UsernameUniquenessValidator.class)
 @Documented
-public @interface ValidEmail {
-    String message() default "Sorry, an email has to meet constraints";
+public @interface UniqueUsername {
+
+    String message() default "Given username is already used in the system";
 
     Class<?>[] groups() default {};
 

@@ -1,6 +1,5 @@
 package com.demo.application.registrationsimplewebapp.converters;
 
-
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
@@ -22,11 +21,8 @@ public class UserDtoToUserConverter implements Converter<UserDto, User> {
         }
 
         User user = new User();
-        user.setFirstName(source.getFirstName());
-        user.setLastName(source.getLastName());
-        user.setEmail(source.getEmail());
+        user.setUsername(source.getUsername());
         user.setPassword(source.getPassword());
-        user.setMatchingPassword(source.getMatchingPassword());
 
         return user;
     }

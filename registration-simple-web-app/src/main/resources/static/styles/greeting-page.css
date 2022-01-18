@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.greeting-page {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.greeting-page__card {
+    margin: 0;
+    padding: 90px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 7px;
+}

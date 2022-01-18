@@ -21,11 +21,9 @@ public class UserToUserDtoConverter implements Converter<User, UserDto> {
         }
 
         UserDto user = new UserDto();
-        user.setFirstName(source.getFirstName());
-        user.setLastName(source.getLastName());
-        user.setEmail(source.getEmail());
+        user.setUsername(source.getUsername());
         user.setPassword(source.getPassword());
-        user.setMatchingPassword(source.getMatchingPassword());
+        user.setMatchingPassword(source.getPassword());
 
         return user;
     }
